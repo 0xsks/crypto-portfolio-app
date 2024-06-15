@@ -1,10 +1,10 @@
-import { createStore, combineReducers } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 import { portfolioReducer } from './reducers';
 
-const rootReducer = combineReducers({
-  portfolio: portfolioReducer,
+const store = configureStore({
+  reducer: {
+    portfolio: portfolioReducer,
+  }
 });
-
-const store = createStore(rootReducer);
 
 export default store;
