@@ -1,0 +1,76 @@
+/* Basic Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #212121;
+    background-color: #FAFAFA;
+  }
+  
+  /* Material Design Colors */
+  .primary-color {
+    background-color: #6200EA; /* Example Primary Color */
+    color: #FFFFFF;
+  }
+  
+  .accent-color {
+    background-color: #03DAC6; /* Example Accent Color */
+    color: #000000;
+  }
+  
+  /* Card Styling */
+  .card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Elevation shadow */
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Elevated shadow on hover */
+  }
+  
+  /* Buttons */
+  .button {
+    background-color: #6200EA;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #3700B3; /* Darker shade on hover */
+  }
+  
+  /* Utility Classes */
+  .text-center {
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .central-card {
+    width: 50%;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    text-align: center;
+  }
+
+  #priceChart {
+    width: 100%;
+    height: 300px;
+  }
