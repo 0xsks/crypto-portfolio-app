@@ -14,12 +14,16 @@
           <input type="text" id="tokenInput" placeholder="Enter token symbol (e.g., BTC)">
           <button onclick="fetchTokenPrice()">Get Price</button>
           <p id="priceDisplay"></p>
-          <canvas id="priceChart"></canvas> <!-- Canvas for the chart -->
+          <div id="chartContainer">
+            <canvas id="priceChart"></canvas>
+          </div>
+          <div id="tableContainer"></div>
         </div>
       </div>
     </div>
+    <script src="fallingCoins.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
     <script src="tokenPrice.js"></script>
-  <script src="fallingCoins.js"></script>
-</body>
+    <script src="top10crypto.js"></script>
+  </body>
 </html>
