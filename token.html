@@ -10,11 +10,11 @@
   <div class="container">
     <div class="card central-card">
       <div class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Crypto Tracker</a>
+        <a class="navbar-brand" href="index.html">Crypto Tracker</a>
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="token.html">Token Info</a>
+              <a class="nav-link" href="#">Token Info</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">News</a>
@@ -25,19 +25,21 @@
           </ul>
         </div>
       </div>
+      <!-- End of Navbar -->
       <div class="card-body">
-        <h5 class="card-title">Manage Wallet</h5>
-        <input type="text" id="walletName" placeholder="Enter Wallet Name">
-        <input type="text" id="walletAddress" placeholder="Enter Wallet Address">
-        <button id="addWalletButton">Add Wallet Address</button>
-        <div id="walletList"></div>
-        <div id="walletDetails"></div>
+        <h5 class="card-title">Token Price Lookup</h5>
+        <input type="text" id="tokenInput" placeholder="Enter token symbol (e.g., BTC)">
+        <button onclick="fetchTokenPrice()">Get Price</button>
+        <p id="priceDisplay"></p>
+        <div id="chartContainer">
+          <canvas id="priceChart"></canvas>
+        </div>
+        <div id="tableContainer"></div>
       </div>
     </div>
   </div>
-  <script src="walletManager.js"></script>
   <script src="fallingCoins.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
   <script src="tokenPrice.js"></script>
   <script src="top10crypto.js"></script>
 </body>

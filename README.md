@@ -1,2 +1,1 @@
-a simple crypto portfolio built with react.js
----
+a simple crypto token tool and portfolio built with javascript
