@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var newWallet = `${name}|${address}`;
     var wallets = getWallets();
 
+    // Add a check to ensure the name is not blank before adding a new wallet
+    if (!name.trim()) {
+      alert('Name cannot be blank. Please enter a valid name.');
+      return;
+    }
+
     if (wallets.length >= 10) {
       alert('Maximum of 10 wallets reached. Please delete a wallet before adding a new one.');
       return;
@@ -45,6 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     };
 
+    // Check if there are wallets to display, otherwise hide the dropdown menu
+    if (wallets.length === 0) {
+      select.style.display = 'none';
+    }
+
     // Add default option for the first wallet
     var defaultOption = document.createElement('option');
     var [defaultName, defaultAddress] = wallets.length > 0 ? wallets[0].split('|') : ['', ''];
@@ -52,13 +63,25 @@ document.addEventListener('DOMContentLoaded', function() {
     defaultOption.text = `Name: ${defaultName}, Address: ${defaultAddress}`;
     select.appendChild(defaultOption);
 
-    wallets.forEach(walletData => {
-      var [name, address] = walletData.split('|');
-      var option = document.createElement('option');
-      option.value = walletData;
-      option.text = `Name: ${name}, Address: ${address}`;
-      select.appendChild(option);
-    });
+    // Check if there are wallets to display, otherwise show a message
+    if (wallets.length === 0) {
+      walletList.innerHTML = ''; // Clear existing entries
+      walletDetails.innerHTML = ''; // Clear wallet details
+
+      var noWalletOption = document.createElement('option');
+      noWalletOption.text = 'No wallets';
+      select.appendChild(noWalletOption);
+    } else {
+      wallets.forEach(walletData => {
+        var [name, address] = walletData.split('|');
+        if (name && address !== undefined) {
+          var option = document.createElement('option');
+          option.value = walletData;
+          option.text = `Name: ${name}, Address: ${address}`;
+          select.appendChild(option);
+        }
+      });
+    }
 
     walletList.appendChild(select);
 
