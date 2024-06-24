@@ -6,8 +6,7 @@ const tokenMapping = {
     // Add more mappings as needed
 };
 
-async function fetchTokenPrice() {
-    const tokenInput = document.getElementById('tokenInput').value.toLowerCase();
+async function fetchTokenPrice(tokenInput = 'btc') { // Added default value for tokenInput
     const tokenSymbol = tokenMapping[tokenInput] || tokenInput; // Use mapped ID or input as fallback
     const priceUrl = `https://api.coingecko.com/api/v3/simple/price?ids=${tokenSymbol}&vs_currencies=usd`;
     const chartUrl = `https://api.coingecko.com/api/v3/coins/${tokenSymbol}/market_chart?vs_currency=usd&days=30&interval=daily`;
@@ -67,4 +66,8 @@ document.getElementById('tokenInput').addEventListener('keypress', function(even
         event.preventDefault(); // Prevent the default action to stop submitting the form
         fetchTokenPrice();
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    fetchTokenPrice('btc'); // Load Bitcoin price and chart by default
 });

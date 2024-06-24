@@ -14,33 +14,24 @@
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Token Info</a>
+              <a class="nav-link" href="token.html">Token Info</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="news.html">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="notes.html">Notes</a>
+              <a class="nav-link" href="#">Notes</a>
             </li>
           </ul>
         </div>
       </div>
-      <!-- End of Navbar -->
       <div class="card-body">
-        <h5 class="card-title">Token Price Lookup</h5>
-        <input type="text" id="tokenInput" placeholder="Enter token symbol (e.g., BTC)">
-        <button onclick="fetchTokenPrice()">Get Price</button>
-        <p id="priceDisplay"></p>
-        <div id="chartContainer">
-          <canvas id="priceChart"></canvas>
-        </div>
-        <div id="tableContainer"></div>
+        <h5 class="card-title">About</h5>
+        <ul id="newsList"></ul>
       </div>
     </div>
   </div>
   <script src="fallingCoins.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
-  <script src="tokenPrice.js"></script>
-  <script src="top10crypto.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>

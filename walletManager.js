@@ -45,6 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     };
 
+    // Add default option for the first wallet
+    var defaultOption = document.createElement('option');
+    var [defaultName, defaultAddress] = wallets.length > 0 ? wallets[0].split('|') : ['', ''];
+    defaultOption.value = wallets.length > 0 ? wallets[0] : '';
+    defaultOption.text = `Name: ${defaultName}, Address: ${defaultAddress}`;
+    select.appendChild(defaultOption);
+
     wallets.forEach(walletData => {
       var [name, address] = walletData.split('|');
       var option = document.createElement('option');
@@ -54,6 +61,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     walletList.appendChild(select);
+
+    // Display details of the first wallet by default
+    if (wallets.length > 0) {
+        var [firstName, firstAddress] = wallets[0].split('|');
+        displaySelectedWallet(firstName, firstAddress);
+    }
   }
 
   function displaySelectedWallet(name, address) {

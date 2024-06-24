@@ -5,6 +5,9 @@ body {
     line-height: 1.5;
     color: #212121;
     background-color: #FAFAFA;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
   }
   
   /* Material Design Colors */
@@ -71,14 +74,18 @@ body {
     max-width: 100%; /* Limit width to prevent overflow */
     height: auto; /* Adjust height based on content */
     overflow-y: auto; /* Enable scrolling within the container if needed */
+    padding-top: 100px; /* Adjust the padding to ensure content is not cut off */
   }
 
   .central-card {
-    margin: auto; /* Center the card within the container */
-    position: relative; /* Ensure it's positioned relative to its container */
-    overflow-y: auto; /* Scroll inside the card if content overflows */
-    width: 100%;
-    min-width: 300px;
+    width: 80vw; /* 75% of the viewport width */
+    height: 75vh; /* 75% of the viewport height */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Enable scrolling for card content */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     padding: 20px;
     text-align: center;
@@ -104,4 +111,15 @@ body {
 
   .wallet-entry button {
     margin-left: 10px;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Set your desired background color */
+    z-index: 1000; /* Ensure the navbar is above other content */
   }
