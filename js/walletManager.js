@@ -72,7 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
       noWalletOption.text = 'No wallets';
       select.appendChild(noWalletOption);
     } else {
-      wallets.forEach(walletData => {
+      var uniqueWallets = new Set(wallets); // Use a Set to store unique wallets
+      uniqueWallets.forEach(walletData => {
         var [name, address] = walletData.split('|');
         if (name && address !== undefined) {
           var option = document.createElement('option');
