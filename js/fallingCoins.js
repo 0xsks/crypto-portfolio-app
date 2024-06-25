@@ -9,9 +9,9 @@ const numberOfCoins = 50; // Adjust number of coins here
 
 // Load explosion sounds
 const explosionSounds = [
-  new Audio('exp.mp3'),
-  new Audio('exp.mp3'),
-  new Audio('exp.mp3')
+  new Audio('sound/exp.mp3'),
+  new Audio('sound/exp.mp3'),
+  new Audio('sound/exp.mp3')
 ];
 let currentSound = 0;
 

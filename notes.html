@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Crypto Portfolio Tracker</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
@@ -10,29 +10,29 @@
   <div class="container">
     <div class="card central-card">
       <div class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Crypto Tracker</a>
+        <a class="navbar-brand" href="index.html">Crypto Tracker</a>
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
               <a class="nav-link" href="token.html">Token Info</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">News</a>
+              <a class="nav-link" href="news.html">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="notes.html">Notes</a>
+              <a class="nav-link" href="#">Notes</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="card-body">
-        <h5 class="card-title">Recent Crypto News</h5>
-        <ul id="newsList"></ul>
+        <h5 class="card-title">About</h5>
+        <p>This is a crypto portfolio tracker that allows you to track your crypto portfolio and get news and token info.</p>
+        <p>Made by <a href="https://0xsks.github.io" target="_blank">0xSparked</a></p>
       </div>
     </div>
   </div>
-  <script src="fallingCoins.js"></script>
+  <script src="js/fallingCoins.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="cryptoNews.js"></script>
 </body>
 </html>
